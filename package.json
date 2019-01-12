@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KamandPrompt/GraphMate#readme",
   "dependencies": {
+    "cytoscape": "^3.3.1",
     "electron": "^4.0.1"
   }
 }
