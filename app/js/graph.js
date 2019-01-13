@@ -45,3 +45,8 @@ class Graph
         });
     }
 }
+// An example for debugging
+// var g = new Graph('cy');
+// console.log(g);
+// obj = {name:'saurabh', shape: 'octagon', color: 'cyan', width: '300px', height: '400px'};
+// g.addNode(obj);
