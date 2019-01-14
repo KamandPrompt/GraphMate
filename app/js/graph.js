@@ -45,7 +45,7 @@ class Graph
         group: 'edges',
         data: {name:  edge.name,source:edge.source,target:edge.target},
         }).css({
-            'target-arrow-color':((edge.color ==undefined)? '#ccc':edge.target_arrow_color),
+            'target-arrow-color':((edge.color ==undefined)? '#ccc':edge.color),
             'target-arrow-shape':((edge.shape ==undefined)? 'triangle':edge.shape),
             'line-color': ((edge.color == undefined) ? '#ccc' : edge.color),
             'width': ((edge.width == undefined) ? 3 : edge.width)
