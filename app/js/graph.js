@@ -34,10 +34,24 @@ class Graph
         //Print the nodes 
         console.log(this.cy.nodes());
     }
-}
+    addEdge(edge)
+    {
+        if ((edge == undefined) || (edge.name == undefined) || (edge.source == undefined) || (edge.target == undefined))
+        {    
+            return;
+        }
 
-// An example for debugging
-// var g = new Graph('cy');
-// console.log(g);
-// obj = {name:'saurabh', shape: 'octagon', color: 'cyan', width: '300px', height: '400px'};
-// g.addNode(obj);
+        this.cy.add({
+        group: 'edges',
+        data: {name:  edge.name,source:edge.source,target:edge.target},
+        }).css({
+            'target-arrow-color':((edge.color ==undefined)? '#ccc':edge.color),
+            'target-arrow-shape':((edge.shape ==undefined)? 'triangle':edge.shape),
+            'line-color': ((edge.color == undefined) ? '#ccc' : edge.color),
+            'width': ((edge.width == undefined) ? 3 : edge.width)
+        });
+
+        //Print the nodes 
+        console.log(this.cy.edges());
+    }
+}
