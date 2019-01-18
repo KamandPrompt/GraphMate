@@ -31,6 +31,13 @@ class Graph
             'height': ((node.height == undefined) ? '50px' : node.height),
         });
         
+        changeColor(element,colour)
+        {
+            this.cy.css({
+                'background-color': (for(var j = 0;j < element.length;j++)
+                (ele.isNode() == 1)?node.color = colour:edge.color = colour)
+            });
+        }
         //Print the nodes 
         console.log(this.cy.nodes());
     }
